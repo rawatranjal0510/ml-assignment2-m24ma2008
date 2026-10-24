@@ -1,0 +1,10 @@
+{
+  "seed": 242008,
+  "roll_no": "M24MA2008",
+  "split": {"train_per_id": 6, "val_per_id": 2, "test_per_id": 2, "file": "data/split.npz"},
+  "mask": {"row_start": 24, "row_end": 40, "col_start": 24, "col_end": 40},
+  "tree_grid": {"max_depth": [2, 4, 8, 16, null], "min_samples_leaf": [1, 2, 4]},
+  "bagging": {"B_values": [1, 5, 10, 25, 50, 100, 200], "B_max": 200},
+  "samme": {"depths": [1, 2, 3, 4], "rounds": [10, 25, 50, 100], "max_rounds": 100},
+  "biasvar": {"n_refits": 30, "depths": [2, 6, null], "bag_size_depth_study": 100, "bag_size_final": 200}
+}
