@@ -1,1 +1,14 @@
+Log: output of `python scripts/analyze_refits.py` on results/q3_results.pkl.gz
+Roll no: M24MA2008 | seed: 242008
 
+30 refits, 80 test images
+
+model               Bias2    Var    sum      acc(clean)      acc(masked)
+Single tree         0.362  0.634  0.996    0.502±0.054     0.306±0.149
+Bagging (200)       0.486  0.022  0.508    0.822±0.032     0.644±0.084
+SAMME (d3,100)      0.919  0.015  0.933    0.185±0.055     0.175±0.040
+
+Depth study (Table 8): depth | tree Bias2 Var | bag100 Bias2 Var | acc tree / bag
+    2 | 0.915 0.039 | 0.932 0.011 | 0.060 / 0.126  (gain +0.066)
+    6 | 0.815 0.099 | 0.850 0.015 | 0.133 / 0.375  (gain +0.243)
+ None | 0.362 0.634 | 0.486 0.026 | 0.502 / 0.807  (gain +0.305)
